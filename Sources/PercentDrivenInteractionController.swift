@@ -1,13 +1,8 @@
 //
 //  PercentDrivenInteractionController.swift
-//  GoChat
-//
-//  Created on 2/24/17.
-//  Copyright © 2017 GoChatz Inc. All rights reserved.
 //
 
 import UIKit
-import Tools
 
 open class PercentDrivenInteractionController: UIPercentDrivenInteractiveTransition, InteractionController {
 

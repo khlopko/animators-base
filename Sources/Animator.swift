@@ -1,9 +1,5 @@
 //
 //  Animator.swift
-//  Chatter
-//
-//  Created by Kirill Khlopko on 2/23/17.
-//  Copyright © 2017 Kirill. All rights reserved.
 //
 
 import UIKit
@@ -33,10 +29,16 @@ extension Animator {
         return viewController
     }
     var fromView: UIView! {
-        return context?.view(forKey: .from)
+        guard let view = context?.view(forKey: .from) else {
+            fatalError("Illegal state: fromView is nil!")
+        }
+        return view
     }
     var toView: UIView! {
-        return context?.view(forKey: .to)
+        guard let view = context?.view(forKey: .to) else {
+            fatalError("Illegal state: toView is nil!")
+        }
+        return view
     }
     var toInitialFrame: CGRect {
         return context?.initialFrame(for: toViewController) ?? .zero

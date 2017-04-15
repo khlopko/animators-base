@@ -1,21 +1,14 @@
 //
 //  AnimatorsProvider.swift
-//  Chatter
-//
-//  Created by Kirill Khlopko on 2/23/17.
-//  Copyright © 2017 Kirill. All rights reserved.
 //
 
 import UIKit
-import Tools
 
 open class AnimatorsProvider {
 
     open var isInteractive = false
 
-    private let controllers: [AnimationController] = [
-        HorizontalSlideAnimator(),
-    ]
+    private let controllers: [AnimationController] = []
     private let interactionController = PercentDrivenInteractionController()
 
     public init() {

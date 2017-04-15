@@ -1,17 +1,13 @@
 //
 //  InteractionController.swift
-//  GoChat
-//
-//  Created on 2/24/17.
-//  Copyright © 2017 GoChatz Inc. All rights reserved.
 //
 
 import UIKit
 
-/// `InteractionController` protocol.
+/// Protocol `InteractionController`.
 /// Use this protocol to implement your own interaction controller for transition.
-/// - By default, `PercentDrivenInteractionController`, that inherits `UIPercentDrivenInteractiveTransition` adopts this protocol. 
-///   For most cases this class is enought.
+/// - By default, `PercentDrivenInteractionController`, that inherits `UIPercentDrivenInteractiveTransition`,
+///   adopts this protocol. For most cases this class is enough.
 public protocol InteractionController: UIViewControllerInteractiveTransitioning {
 
     weak var delegate: InteractionControllerDelegate? { get set }
@@ -24,13 +20,13 @@ public protocol InteractionController: UIViewControllerInteractiveTransitioning 
     func finish()
 }
 
-/// `InteractionDriver` protocol.
+/// Protocol `InteractionDriver`.
 /// Use this class to define custom interactions based on gestures.
 public protocol InteractionDriver: class {
     weak var interactionController: InteractionController? { get set }
 }
 
-/// `InteractionControllerDelegate` protocol.
+/// Protocol `InteractionControllerDelegate`.
 public protocol InteractionControllerDelegate: class {
 
     /// Delegate method, called each time `update()` method of controller receives new value of `percentComplete`.
